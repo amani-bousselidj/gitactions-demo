@@ -2,7 +2,7 @@ name: تشغيل سكربت بايثون تلقائياً
 
 on:
   push:
-    branches: [ "main" ]   # يشغل فقط عندما نعمل push على main
+   branches: [ "master" ]
 
 jobs:
   run-python-script:
