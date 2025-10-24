@@ -1,0 +1,21 @@
+name: تشغيل سكربت بايثون تلقائياً
+
+on:
+  push:
+    branches: [ "main" ]   # يشغل فقط عندما نعمل push على main
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: تحميل الكود من GitHub
+        uses: actions/checkout@v4
+
+      - name: تثبيت Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: تشغيل السكربت
+        run: python test_app.py
